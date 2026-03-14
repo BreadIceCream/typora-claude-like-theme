@@ -1040,6 +1040,77 @@ header {
 
 /*
  * ──────────────────────────────────────────────────────────
+ * File-library tree — sticky ancestor breadcrumb
+ * Ancestor folders of the active file pin to the top when
+ * scrolling, keeping hierarchy context always visible.
+ * top values assume ~30 px row height; tweak if rows differ.
+ * ──────────────────────────────────────────────────────────
+ */
+#file-library-tree .file-tree-node:not(.file-node-root):has(.file-tree-node.active) > .file-node-content {
+    position: sticky;
+    background: var(--side-bar-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+/* depth 1 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
+    top: 0;
+    z-index: 103;
+}
+
+/* depth 2 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
+    top: 30px;
+    z-index: 102;
+}
+
+/* depth 3 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
+    top: 60px;
+    z-index: 101;
+}
+
+/* depth 4 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
+    top: 90px;
+    z-index: 100;
+}
+
+/* Fix tree lines broken by position:sticky on .file-node-content:
+   1. ::before loses its containing block (height:100% shrinks to 1 row, left
+      shifts by 9 px because .file-node-content has margin-left:-9px).
+      → Hide it; redraw as .file-tree-node::after (referenced to .file-tree-node,
+        so height:100% still spans the full subtree and left is correct).
+   2. .file-node-icon::after left shifts by 9 px for the same reason.
+      → Compensate: -21px + 9px = -12px. */
+#file-library-tree .file-tree-node:not(.file-node-root):has(.file-tree-node.active) > .file-node-content::before {
+    display: none;
+}
+
+#file-library-tree .file-tree-node:not(.file-node-root):has(.file-tree-node.active)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    left: -21px;
+    top: -8px;
+    height: 100%;
+    background: var(--border-color);
+    z-index: 20;
+}
+
+/* Last sibling: no downward stem — mirrors the original ::before rule */
+#file-library-tree .file-node-children > div:last-of-type:has(.file-tree-node.active)::after {
+    display: none;
+}
+
+/* L-connector: compensate 9 px left shift */
+#file-library-tree .file-tree-node:not(.file-node-root):has(.file-tree-node.active) > .file-node-content > .file-node-icon::after {
+    left: -12px;
+}
+
+/*
+ * ──────────────────────────────────────────────────────────
  * Search hit highlight
  * ──────────────────────────────────────────────────────────
  */
