@@ -1,0 +1,44 @@
+name: Release Latest Theme Files
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - claude-like.css
+      - claude-like-dark.css
+      - .github/workflows/release-latest.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release-latest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Publish latest release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          artifactErrorsFailBuild: true
+          artifacts: "claude-like.css,claude-like-dark.css"
+          body: |
+            Auto-updated from the latest commit on `master`.
+
+            Included files:
+            - `claude-like.css`
+            - `claude-like-dark.css`
+          commit: ${{ github.sha }}
+          generateReleaseNotes: true
+          makeLatest: true
+          name: Latest
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: true
+          prerelease: false
+          removeArtifacts: true
+          replacesArtifacts: true
+          tag: latest
