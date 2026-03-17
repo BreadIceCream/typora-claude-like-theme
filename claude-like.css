@@ -967,28 +967,25 @@ header {
 }
 
 /* depth 1 */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
-    top: 0;
-    z-index: 103;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 0; z-index: 110; }
 /* depth 2 */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
-    top: 30px;
-    z-index: 102;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 30px; z-index: 109; }
 /* depth 3 */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
-    top: 60px;
-    z-index: 101;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 60px; z-index: 108; }
 /* depth 4 */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content {
-    top: 90px;
-    z-index: 100;
-}
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 90px; z-index: 107; }
+/* depth 5 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 120px; z-index: 106; }
+/* depth 6 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 150px; z-index: 105; }
+/* depth 7 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 180px; z-index: 104; }
+/* depth 8 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 210px; z-index: 103; }
+/* depth 9 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 240px; z-index: 102; }
+/* depth 10 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node:has(.file-tree-node.active) > .file-node-content { top: 270px; z-index: 101; }
 
 /*
  * ──────────────────────────────────────────────────────────
@@ -1011,29 +1008,25 @@ header {
 }
 
 /* depth 1 — no ancestors sticky */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node.active {
-    top: 0;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node.active { top: 0; }
 /* depth 2 — 1 ancestor above */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active {
-    top: 30px;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 30px; }
 /* depth 3 — 2 ancestors above */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active {
-    top: 60px;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 60px; }
 /* depth 4 — 3 ancestors above */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active {
-    top: 90px;
-}
-
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 90px; }
 /* depth 5 — 4 ancestors above */
-#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active {
-    top: 120px;
-}
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 120px; }
+/* depth 6 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 150px; }
+/* depth 7 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 180px; }
+/* depth 8 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 210px; }
+/* depth 9 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 240px; }
+/* depth 10 */
+#file-library-tree .file-node-root > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node > .file-node-children > .file-tree-node.active { top: 270px; }
 
 .file-tree-node > .file-node-background {
     border-radius: 5px;
