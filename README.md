@@ -303,3 +303,10 @@ If you prefer highly decorative layouts or very dramatic heading styles, this th
 Claude-like Theme is not about mechanically imitating a webpage. Its goal is to bring a calm, credible, long-reading-friendly atmosphere into Typora and turn that into a theme that actually works for Chinese Markdown writing.
 
 If your documents often mix headings, long explanations, tables, and code blocks, this theme should fit that workflow well.
+
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+Claude is a trademark of Anthropic, PBC. This project is not affiliated with, endorsed by, or sponsored by Anthropic.
